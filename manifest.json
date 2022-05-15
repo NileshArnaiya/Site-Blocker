@@ -1,0 +1,31 @@
+{
+                  "manifest_version": 2,
+                  "name": "DontEatYourself",
+                  "description": "An adult website blocking extension",
+                  "version": "1.0",
+                  "icons":{
+                     "48": "/images/adultlogo.png",
+                     "128": "/images/adultlogo.png"
+                  },
+                  "page_action":{
+                     "default_icon": {
+                        "16": "/images/adultlogo.png",
+                        "48": "/images/adultlogo.png"
+                     }
+                    },
+
+                     "content_scripts": [
+                        {
+                        "matches":[
+                            "<all_urls>"
+                        ],
+                            "js" : ["content.js"]
+                         }
+                        ],
+                        "permissions": [
+                            "tabs"
+                        ],
+                        "background": {
+                            "scripts": ["background.js"]
+                        }
+                    }
